@@ -8,8 +8,8 @@ function draw() {
   background(220);
   drawStreet();
 
-  rect(355, pos, 40, 40);
-  pos++;
+  let light = new TrafficLight(50, 50);
+  light.display();
 }
 
 function drawStreet() {
