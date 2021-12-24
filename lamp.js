@@ -14,9 +14,15 @@ class Lamp {
     this.y = y;
   }
 
-  display() {
+  turnOn() {
     strokeWeight(1);
     fill(this.color);
+    ellipse(this.x, this.y , 12, 12);
+  }
+
+  turnOff() {
+    strokeWeight(1);
+    fill(color(10, 10, 10));
     ellipse(this.x, this.y , 12, 12);
   }
 }

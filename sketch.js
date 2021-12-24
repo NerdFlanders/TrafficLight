@@ -1,15 +1,26 @@
 function setup() {
   createCanvas(800, 800);
+  
+  background(220);
+  drawStreet();
+
+  let lightBottom = new TrafficLight(455, 455);
+  lightBottom.display();
+  let lightRight = new TrafficLight(455, 325, "right");
+  lightRight.display();
+  let lightTop = new TrafficLight(325, 295, "top");
+  lightTop.display();
+  let lightLeft = new TrafficLight(295, 455, "left");
+  lightLeft.display();
+
+  var controller = new LightsController(lightBottom, lightRight, lightLeft, lightTop);
+  controller.runDefaultControl();
 }
 
 var pos = 45;
 
 function draw() {
-  background(220);
-  drawStreet();
-
-  let light = new TrafficLight(50, 50);
-  light.display();
+  
 }
 
 function drawStreet() {
